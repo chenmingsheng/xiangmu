@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="/common/extend/mui/dist/css/mui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/common/extend/mui/dist/css/iconfont.css"/>
+    {load href="__LAYUI__/css/layui.css,/common/css/common.css"/}
+    {load href="/common/js/jquery-1.9.1.min.js,/common/js/common.js"/}
+</head>
+<body>
+<header class="mui-bar mui-bar-nav">
+	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="{:url('/home')}"></a>
+    <h1 class="mui-title">标题</h1>
+</header>
+<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item" href="{:url('/home')}">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="{:url('/search')}">
+				<span class="mui-icon mui-icon-search"></span>
+				<span class="mui-tab-label">超级搜索</span>
+			</a>
+		</nav>
+<div class="mui-content">
+    <div class="mui-slider-group">
+        <div id="item1" class="mui-slider-item mui-control-content mui-active">
+            <div id="scroll1" class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <ul class="mui-table-view"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/common/extend/mui/dist/js/mui.min.js"></script>
+<script src="/common/js/info.js"></script>
+<script type="text/javascript">
+    var type=getUrlParam('t');
+    $('.mui-title').text(type);
+    data(type);
+    mui('body').on('tap', 'a', function () {
+        window.top.location.href = this.href;
+    });
+</script>
+</body>
+
+</html>

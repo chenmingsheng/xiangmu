@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>58优劵网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="/common/extend/mui/dist/css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="/common/extend/mui/dist/css/iconfont.css"/>
+    {load href="__LAYUI__/css/layui.css,/common/css/common.css,/common/css/mobile.css"/}
+    {load href="/common/js/jquery-1.9.1.min.js,/common/js/common.js,__LAYUI__/layui.all.js,/common/js/downCount.js"/}
+</head>
+
+<body>
+<header class="mui-bar mui-bar-nav">
+    <h1 class="mui-title">58优劵网</h1>
+</header>
+<nav class="mui-bar mui-bar-tab">
+    <a class="mui-tab-item mui-active" href="{:url('/home')}">
+        <span class="mui-icon mui-icon-home" ></span>
+        <span class="mui-tab-label">首页</span>
+    </a>
+    <a class="mui-tab-item" href="{:url('/search')}">
+        <span class="mui-icon mui-icon-search"></span>
+        <span class="mui-tab-label">超级搜索</span>
+    </a>
+</nav>
+<div class="mui-content">
+    <div id="home" class="mui-control-content mui-active">
+        <div id="slider" class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+                <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DwVHXSHFk8mUcQipKwQzePCperVdZeJviK7Vc7tFgwiFRAdhuF14FMbQrulFsj3gIxq3IhSJN6GSJFSjtt%2FEpQU8Yh1%2Bw0KbaQ5KojZ203eomP4imeK%2FiVcs%2Fhc73tO6KVYo%2BqyT%2FBa1NrKwvDJNPXkIGbLNY5ut4zueC0P1cNS9iw0%2FdWyiVaogaseAKBk0cTbU9KzMTtxpe7auY0HPYWszlTEcWhO9mCmht7GX%2FH9k%3D">
+                        <img src="/common/image/lun.jpg">
+                    </a>
+                </div>
+                <!-- 第一张 -->
+                <div class="mui-slider-item">
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DwVHXSHFk8mUcQipKwQzePCperVdZeJviK7Vc7tFgwiFRAdhuF14FMbQrulFsj3gIxq3IhSJN6GSJFSjtt%2FEpQU8Yh1%2Bw0KbaQ5KojZ203eomP4imeK%2FiVcs%2Fhc73tO6KVYo%2BqyT%2FBa1NrKwvDJNPXkIGbLNY5ut4zueC0P1cNS9iw0%2FdWyiVaogaseAKBk0cTbU9KzMTtxpe7auY0HPYWszlTEcWhO9mCmht7GX%2FH9k%3D">
+                        <img src="/common/image/lun.jpg">
+                    </a>
+                </div>
+                <!-- 第二张 -->
+                <div class="mui-slider-item">
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DRF1xgbHefPYcQipKwQzePCperVdZeJviK7Vc7tFgwiFRAdhuF14FMadFFfXx9Tq6t4hWD5k2kjOJFSjtt%2FEpQU8Yh1%2Bw0KbaQ5KojZ203eomP4imeK%2FiVcs%2Fhc73tO6KVYo%2BqyT%2FBa1NrKwvDJNPXkIGbLNY5ut4zueC0P1cNS%2B6zThPYvErzhJBFs1%2FyLxVPxey8%2Bhd8px1LxLyojPgjrBnbwlZle59K0bp%2BeiLt1EmkKI3opU8hrgaHiwyjIfS%2FYdPBexeuF7jnf3AraH%2FQtvwcCXuxz7RPH%2B7USUhoLHJwjUSG7GnDyUi2X4HY%2F8i">
+                        <img src="/common/image/lun2.jpg">
+                    </a>
+                </div>
+                <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="/common/image/lun.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <ul class="mui-table-view mui-grid-view mui-grid-9 mui-active cm-img">
+            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 cell">
+                <a href="/many?t=男装">
+                    <div class="t1"></div>
+                    <div class="mui-media-body">男装</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 cell">
+                <a href="/many?t=女装">
+                    <img src="/common/image/t2.png" alt="">
+                    <div class="mui-media-body">女装</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 cell">
+                <a href="/many?t=女鞋">
+                    <img src="/common/image/t5.png" alt="">
+                    <div class="mui-media-body">女鞋</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 cell">
+                <a href="/many?t=百货">
+                    <img src="/common/image/t7.png" alt="">
+                    <div class="mui-media-body">百货</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 cell">
+                <a href="/many?t=数码">
+                    <img src="/common/image/t8.png" alt="">
+                    <div class="mui-media-body">数码</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 cell">
+                <a href="/many?t=美妆">
+                    <img src="/common/image/t12.png" alt="">
+                    <div class="mui-media-body">美妆</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 cell">
+                <a href="/many?t=内衣">
+                    <img src="/common/image/t3.png" alt="">
+                    <div class="mui-media-body">内衣</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 cell">
+                <a href="/many?t=居家">
+                    <img src="/common/image/t4.png" alt="">
+                    <div class="mui-media-body">居家</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 cell">
+                <a href="/many?t=母婴">
+                    <img src="/common/image/t6.png" alt="">
+                    <div class="mui-media-body">母婴</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 cell">
+                <a href="/many?t=运动">
+                    <img src="/common/image/t10.png" alt="">
+                    <div class="mui-media-body">运动</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 cell">
+                <a href="/many?t=服务">
+                    <img src="/common/image/t9.png" alt="">
+                    <div class="mui-media-body">服务</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 cell">
+                <a href="/many?t=其他">
+                    <img src="/common/image/t11.png" alt="">
+                    <div class="mui-media-body">其他</div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="mui-slider-group">
+            <div id="item1" class="mui-slider-item mui-control-content mui-active">
+                <div id="scroll1" class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <ul class="mui-table-view"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+<script src="/common/extend/mui/dist/js/mui.min.js"></script>
+<script>
+    var pageSize = 15;//每页显示条数
+    var counter = 1;//计数器
+    var pageStart = 0;//开始数据条数
+    var Flag = true;
+    data();
+    function data(q) {
+        //业务
+        var result = "";
+        $.ajax({
+                    type: 'post',
+                    url: '/mobile',
+                    async: false,
+                    dataType: "json",
+                    data: {page: counter},
+                    success: function (data) {
+                        Flag = data.info == null || data.info == undefined || data.info == '';
+                        if (Flag == false) {
+                            counter++;
+                        }
+                        $.each(data.info, function (i, value) {
+                            result += '<li class="mui-table-view-cell mui-media mu-p">' +
+                                    '<a href="' + value.coupon_click_url + '">' +
+                                    '<img class="mui-pull-left" width="140" height="140" src="' + value.pict_url + '">' +
+                                    '<div style="padding: 0px 0px 0px 145px;">' +
+                                    '<p class="mui-p-sty">' + value.title + '</p>' +
+                                    '<p class="mui-ellipsis"><span class="m-price">现价:￥' + value.zk_final_price + '</span><span>月销' + value.volume + '件</span></p>' +
+                                    '<p class="size s-color">劵后价</p>' +
+                                    '<p><span class="j-prc">￥' + value.info + '</span><span class="c-ju">' + value.voucher + '元劵</span></p>' +
+                                    '</div>' +
+                                    '</a>' +
+                                    '</li>'
+                        });
+                        jQuery(result).insertBefore('#scroll1 .mui-scroll .mui-table-view');
+                    }
+                }
+        );
+    }
+            mui.init({
+                pullRefresh : {
+                    container: "#scroll1",
+                    up : {
+                        height:10,//可选.默认50.触发上拉加载拖动距离
+                        contentrefresh: "正在加载...",// 可选，正在加载状态时，上拉加载控件上显示的标题内容
+                        contentnomore: '没有更多数据了',// 可选，请求完毕若没有更多数据时显示的提醒内容；
+                        callback: pullupRefresh
+                    }
+                }
+            });
+            function pullupRefresh() {
+                setTimeout(function () {
+                    mui('#scroll1').pullRefresh().endPullupToRefresh((Flag)); //参数为true代表没有更多数据了。
+                    data();
+                }, 1500);
+            }
+
+    mui('body').on('tap', 'a', function () {
+        window.top.location.href = this.href;
+    });
+    var slider = mui("#slider");
+    slider.slider({
+        interval: 2000 //自动轮播周期，若为0则不自动播放，默认为0；
+    });
+
+
+
+</script>
+
+</html>

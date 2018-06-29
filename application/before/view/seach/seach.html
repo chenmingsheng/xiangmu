@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索结果</title>
+    {load href="__LAYUI__/css/layui.css,/common/css/common.css"/}
+    {load href="/common/js/jquery-1.9.1.min.js,/common/js/common.js,__LAYUI__/layui.all.js,/common/js/downCount.js"/}
+</head>
+<body>
+{include file="../application/before/html/header.html"}
+<div class="c-info">
+    <div class="layui-container c-i">
+        <div class="layui-row">
+            <div class="layui-col-md12 b-data">
+                <div class="layui-col-md12 b-data">
+                    {foreach $data as $v}
+                    <div class="c_list">
+                        <a class="c-main"
+                           href="{$v.coupon_click_url}"
+                           rel="nofollow" target="_blank"><img
+                                lay-src="{$v.pict_url}"
+                                alt="{$v.title}"
+                                loaded="loaded" style="width: 284px"></a>
+                        <span class="c-hr"><a
+                                href="{$v.coupon_click_url}"
+                                rel="nofollow" target="_blank">{$v.title}</a></span>
+                        <div class="c-price"><span class="c-price1">￥{$v.info}</span><span
+                                class="c-price2">(券后)</span>  <span class="c-price3">￥{$v.zk_final_price}</span></div>
+                        <span class="c-price4">已有<span class="c-price2">{$v.volume}</span>人购买</span><a class="c-ju"
+                                                                                                       href="{$v.coupon_click_url}"
+                                                                                                       rel="nofollow"
+                                                                                                       target="_blank">{$v.coupon_info}</a>
+                    </div>
+                    {/foreach}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+;!function(){
+var layer = layui.layer
+,form = layui.form
+,flow = layui.flow
+,carousel = layui.carousel    ;
+flow.lazyimg();
+//建造实例
+carousel.render({
+elem: '#test1'
+,width: '716px' //设置容器宽度
+,height: '240px' //设置容器宽度
+,arrow: 'always' //始终显示箭头
+//,anim: 'updown' //切换动画方式
+});
+
+}();
+</script>
+{include file="../application/before/html/footer.html"}
+</body>
+</html>

@@ -1,0 +1,90 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="淘宝网优惠券,天猫优惠券,优惠劵,购物劵,58优劵网,淘宝优惠劵">
+    <meta name="description" content="58优劵网最全、最新的淘宝优惠劵网站，您的生活小助手。" />
+    {load href="__LAYUI__/css/layui.css,/common/css/common.css"/}
+    {load href="/common/js/jquery-1.9.1.min.js,/common/js/common.js,__LAYUI__/layui.all.js,/common/js/downCount.js"/}
+    <title>58优劵网</title>
+    <style>
+        #home{background-color: #585555;}
+        #layui-layer1{top: 150 !important;}
+    </style>
+</head>
+<body>
+<div>
+    {include file="../application/before/html/header.html"}
+    <div class="c-info">
+        <div class="layui-container c-i">
+            <div class="layui-row">
+                <div class="layui-col-md12 b-data">
+                    <div class="grid">
+                        <div class="banner c-b1"><a href="/seach?n=女装"><img src="/common/image/a.jpg" alt=""></a></div>
+                        <div class="banner c-b2 "><a href="/seach?n=女鞋"><img src="/common/image/b.jpg" alt=""></a></div>
+                        <div class="banner c-b3"><a href="/seach?n=男装"><img src="/common/image/c.jpg" alt=""></a></div>
+                        <div class="banner c-b4"><a href="/seach?n=男鞋"><img src="/common/image/d.jpg" alt=""></a></div>
+                    </div>
+                    <div class="layui-carousel" id="test1">
+                        <div carousel-item>
+                            <div><a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DwVHXSHFk8mUcQipKwQzePCperVdZeJviK7Vc7tFgwiFRAdhuF14FMbQrulFsj3gIxq3IhSJN6GSJFSjtt%2FEpQU8Yh1%2Bw0KbaQ5KojZ203eomP4imeK%2FiVcs%2Fhc73tO6KVYo%2BqyT%2FBa1NrKwvDJNPXkIGbLNY5ut4zueC0P1cNS9iw0%2FdWyiVaogaseAKBk0cTbU9KzMTtxpe7auY0HPYWszlTEcWhO9mCmht7GX%2FH9k%3D"><img src="/common/image/lun.jpg" alt="" width="710" height="240"></a></div>
+                            <div><a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DRF1xgbHefPYcQipKwQzePCperVdZeJviK7Vc7tFgwiFRAdhuF14FMadFFfXx9Tq6t4hWD5k2kjOJFSjtt%2FEpQU8Yh1%2Bw0KbaQ5KojZ203eomP4imeK%2FiVcs%2Fhc73tO6KVYo%2BqyT%2FBa1NrKwvDJNPXkIGbLNY5ut4zueC0P1cNS%2B6zThPYvErzhJBFs1%2FyLxVPxey8%2Bhd8px1LxLyojPgjrBnbwlZle59K0bp%2BeiLt1EmkKI3opU8hrgaHiwyjIfS%2FYdPBexeuF7jnf3AraH%2FQtvwcCXuxz7RPH%2B7USUhoLHJwjUSG7GnDyUi2X4HY%2F8i"><img src="/common/image/lun2.jpg" alt="" width="710" height="240"></a></div>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="banner c-b1"><a href="/seach?n=家具"><img src="/common/image/e.jpg" alt=""></a></div>
+                        <div class="banner c-b2"><a href="/seach?n=母婴"><img src="/common/image/f.jpg" alt=""></a></div>
+                        <div class="banner c-b3"><a href="/seach?n=数码"><img src="/common/image/g.jpg" alt=""></a></div>
+                        <div class="banner c-b4"><a href="/seach?n=玩具"><img src="/common/image/h.jpg" alt=""></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-row">
+                <div class="c-ti">
+                    <div class="every">每天 10:00 上新<br><span>距下次更新还有</span></div>
+                    <ul class="countdown">
+                        <li><span class="hours">17</span>
+                            <p class="hours_ref p">时</p>
+                        </li>
+                        <li><span class="minutes">54</span>
+                            <p class="minutes_ref p">分</p>
+                        </li>
+                        <li><span class="seconds">03</span>
+                            <p class="seconds_ref p">秒</p>
+                        </li>
+                    </ul>
+                </div>
+                {foreach $data as $v}
+                <div class="c_list">
+                    <a class="c-main"
+                       href="{$v.coupon_click_url}"
+                       rel="nofollow" target="_blank"><img
+                            lay-src="{$v.pict_url}"
+                            alt="{$v.title}"
+                            loaded="loaded" style="width: 284px"></a>
+                        <span class="c-hr"><a
+                                href="{$v.coupon_click_url}"
+                                rel="nofollow" target="_blank">{$v.title}</a></span>
+                    <div class="c-price"><span class="c-price1">￥{$v.info}</span><span
+                            class="c-price2">(券后)</span>  <span class="c-price3">￥{$v.zk_final_price}</span></div>
+                    <span class="c-price4">已有<span class="c-price2">{$v.volume}</span>人购买</span><a class="c-ju"
+                                                                                                    href="{$v.coupon_click_url}"
+                                                                                                    rel="nofollow"
+                                                                                                    target="_blank">{$v.coupon_info}</a>
+                </div>
+                {/foreach}
+                <div id="info"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+var pindex={$pindex};var date=new Date();var day=date.getDate() + 1;
+var month = date.getMonth() + 1;
+var year = date.getFullYear();
+$('.countdown').downCount({date: month + '/' + day + '/' + year+' 10:00:00',offset:+8},function(){});!function(){var layer=layui.layer,form=layui.form,flow=layui.flow,carousel=layui.carousel,laypage=layui.laypage;flow.lazyimg();carousel.render({elem:'#test1',width:'716px',height:'240px',arrow:'always'});laypage.render({elem:'info',layout:['count','prev','page','next','refresh','skip'],count:10000,limit:100,theme:'#1E9FFF',curr:pindex,jump:function(obj,first){if(!first){window.location.href="/?pindex="+obj.curr}}})}();
+</script>
+{include file="../application/before/html/footer.html"}
+</body>
+</html>

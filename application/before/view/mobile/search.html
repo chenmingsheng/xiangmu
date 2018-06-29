@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>搜索优惠卷</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!--<link href="/common/extend/mui/dist/css/mui.min.css" rel="stylesheet" />-->
+		<link href="/common/extend/mui/dist/css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="/common/extend/mui/dist/css/iconfont.css" />
+		{load href="/common/js/jquery-1.9.1.min.js"/}
+		{load href="/common/css/common.css"/}
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">58优劵网</h1>
+		</header>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item" href="{:url('/home')}">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="{:url('/search')}">
+				<span class="mui-icon mui-icon-search"></span>
+				<span class="mui-tab-label">超级搜索</span>
+			</a>
+		</nav>
+		<div class="mui-content">
+			<div id="search">
+				<div class="cm-se">
+					<input type="text" placeholder="输入关键词搜索优惠券" class="search" value="">
+					<div class="c-btn" onclick="seach($(this))">搜索</div>
+				</div>
+			</div>
+			<div class="mui-slider-group">
+            <div id="item1" class="mui-slider-item mui-control-content mui-active">
+                <div id="scroll1" class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <ul class="mui-table-view"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+		</div>
+
+		<script src="/common/extend/mui/dist/js/mui.min.js"></script>
+		<script src="/common/js/info.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui('body').on('tap', 'a', function() {
+				window.top.location.href = this.href;
+			});
+			function seach() {
+				mui.alert('1！', function() {});
+				$('li').remove();
+				var search = $('.search').val();
+				if(search == '' || search == 'null' || search == null) {
+					mui.alert('请输入查找商品！', function() {});
+				}
+				data(search);
+			}
+			document.onkeyup = function (e) {
+				mui.alert('0！', function() {});
+				var code = e.charCode || e.keyCode;
+				if (code == 13) {
+					seach();
+				}
+			}
+			$(".search_txt").blur(function () {
+				$(this).val("女装")
+			});
+			$(".search_txt").focus(function () {
+				$(this).val("")
+			});
+			$(".search_btn").click(function () {
+				$("#fo").submit()
+			});
+		</script>
+	</body>
+
+</html>
